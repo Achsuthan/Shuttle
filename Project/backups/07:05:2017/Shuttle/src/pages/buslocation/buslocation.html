@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Bus Location
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content onscroll="true">
+  <ion-content>
+    <br/>
+    <div>
+      <ion-item (click)="loadMap();">
+        <ion-icon name="ios-locate-outline" item-left></ion-icon>
+        <h2>Referesh My Location</h2>
+      </ion-item>
+
+      <br/>
+
+      <ion-item (click)="buslocation();">
+        <ion-icon name="ios-bus-outline" item-left></ion-icon>
+        <h2>Referesh Bus Location</h2>
+      </ion-item>
+    </div>
+
+    <br/><br/>
+    <div #map id="map" style="height:400px; width: 100%;"></div>
+  </ion-content>
+</ion-content>

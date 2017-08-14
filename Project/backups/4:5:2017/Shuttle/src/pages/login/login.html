@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content onscroll="true">
+
+  <ion-list>
+    <br/><br/>
+    <div style="text-align: center;">
+      <img style="width:25%;height: 30%;" src="assets/img/sliit.png" alt="sliit logo"/>
+    </div>
+    <br/>
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <br/><br/>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <br/>
+
+   <!--<ion-list>
+      <ion-item ngFor="something | async">
+        <p>Username : {{user.firstname}}</p>
+        <p>Password : {{user.password}}</p>
+      </ion-item>
+    </ion-list>
+    <br/>-->
+
+    <div padding>
+      <button ion-button full (click)="login()">Login</button>
+      <br/>
+      <button ion-button full color="danger" (click)="forgot()">Forgot password</button>
+    </div>
+  </ion-list>
+
+</ion-content>

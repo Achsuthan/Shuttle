@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="update()">
+        <ion-icon name="ios-refresh-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content onscroll="true">
+  <br/><br/>
+  <h3 style="text-align: center">Available Balance</h3>
+  <br/><br/>
+  <div style="display: compact;text-align: center">
+    <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
+  <div padding>
+    <button ion-button full (click)="getloan()"  >Get Loan</button>
+    <br/>
+    <button ion-button full color="danger" (click)="payment()">Payment</button>
+  </div>
+</ion-content>

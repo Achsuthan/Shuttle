@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content onscroll="true">
+
+  <br/><br/><br/>
+  <ion-card>
+    <ion-card-header>
+      User Information
+    </ion-card-header>
+
+    <ion-item>
+      <ion-item>
+        <img style="max-width: 40%;border-radius: 20px;border-color: black;border-style: solid;" src='{{img}}'/>
+      </ion-item>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="ios-card-outline" item-left></ion-icon>
+        <h4>ID</h4>
+        <h3>{{id}}</h3>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="ios-person-outline" item-left></ion-icon>
+        <h4>Name</h4>
+        <h3>{{firstname}} {{lastname}}  </h3>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="ios-send-outline" item-left></ion-icon>
+        <h4>Email</h4>
+        <h3>{{email}}</h3>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="ios-card-outline" item-left></ion-icon>
+        <h4>NIC</h4>
+        <h3>{{nic}}</h3>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      QR Code
+    </ion-card-header>
+
+    <ion-item>
+      <ion-item>
+        <img style="max-width: 40%;border-radius: 5px;border-color: black;border-style: solid;" src='{{qr}}'/>
+      </ion-item>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

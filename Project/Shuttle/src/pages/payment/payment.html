@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Payment
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+<!--type="number"
+                 name="price_field"
+                 require
+                 ng-pattern="/^\d{0,9}(\.\d{1,9})?$/"-->
+    <br/><br/><br/>
+    <ion-item>
+      <ion-label stacked>Amount</ion-label>
+      <ion-input  [(ngModel)]="amount" pattern="\d*"  (change)='onChangeAmount($event.target.value)'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Student ID</ion-label>
+      <ion-input type="text" [(ngModel)]="interfaceid"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Student Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button full (click)="doRadio()">MakePayment</button>
+    <br/>
+    <button ion-button full color="danger" (click)="cancel()">Cancel</button>
+  </div>
+</ion-content>
